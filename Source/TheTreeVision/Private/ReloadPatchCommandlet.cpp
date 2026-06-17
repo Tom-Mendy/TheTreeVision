@@ -1,6 +1,6 @@
-#if WITH_EDITOR
-
 #include "ReloadPatchCommandlet.h"
+
+#if WITH_EDITOR
 
 #include "EdGraph/EdGraph.h"
 #include "EdGraph/EdGraphNode.h"
@@ -176,5 +176,9 @@ int32 UReloadPatchCommandlet::Main(const FString& Params)
 
 	return SaveBlueprint(WeaponBlueprint) ? 0 : 1;
 }
-
+#else
+int32 UReloadPatchCommandlet::Main(const FString& Params)
+{
+	return 0;
+}
 #endif
