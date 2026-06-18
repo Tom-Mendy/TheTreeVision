@@ -1,7 +1,5 @@
 #pragma once
 
-#if WITH_EDITOR
-
 #include "Commandlets/Commandlet.h"
 #include "ReloadPatchCommandlet.generated.h"
 
@@ -13,5 +11,3 @@ class THETREEVISION_API UReloadPatchCommandlet : public UCommandlet
 public:
 	virtual int32 Main(const FString& Params) override;
 };
-
-#endif
